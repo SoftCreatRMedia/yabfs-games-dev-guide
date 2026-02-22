@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com https://www.woltlab.com/XSD/6.0/language.xsd" languagename="Romana" languagecode="ro" countrycode="ro">
+    <category name="wcf.user.yabfs.games.catalog.exampleGame">
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.title"><![CDATA[Joc demonstrativ]]></item>
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.description"><![CDATA[Joc minim de pornire pentru extensii YABFS.]]></item>
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.rules"><![CDATA[Defineste propriile reguli.]]></item>
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.button"><![CDATA[Joaca]]></item>
+    </category>
+    <category name="wcf.user.yabfs.games.board.exampleGame">
+        <item name="wcf.user.yabfs.games.board.exampleGame.play"><![CDATA[Executa mutarea]]></item>
+    </category>
+</language>

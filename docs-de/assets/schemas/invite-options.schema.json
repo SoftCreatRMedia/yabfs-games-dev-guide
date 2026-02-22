@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://softcreatrmedia.github.io/yabfs-games-dev-guide/assets/schemas/invite-options.schema.json",
+  "title": "YABFS Invite Options (Strict Starter Template)",
+  "description": "Strict template schema for extension-owned invite options payloads.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "payload"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "payload": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^[a-z][a-zA-Z0-9]*$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/jsonValue"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "jsonValue": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 5000
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/jsonValue"
+          }
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "pattern": "^[a-z][a-zA-Z0-9]*$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/jsonValue"
+          }
+        }
+      ]
+    }
+  }
+}

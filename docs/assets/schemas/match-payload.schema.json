@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://softcreatrmedia.github.io/yabfs-games-dev-guide/assets/schemas/match-payload.schema.json",
+  "title": "YABFS Generic Match Payload",
+  "description": "Host-level generic payload contract expected by base YABFS game UI.",
+  "type": "object",
+  "required": [
+    "matchID",
+    "gameType",
+    "state",
+    "invitedByUserID",
+    "xUserID",
+    "oUserID",
+    "currentTurnUserID",
+    "winnerUserID",
+    "yourUserID",
+    "yourSymbol",
+    "isYourTurn",
+    "canMove",
+    "canAcceptInvite",
+    "canDeclineInvite",
+    "canCancelInvite",
+    "isFinished",
+    "result",
+    "opponent",
+    "createdTime",
+    "startedTime",
+    "finishedTime",
+    "lastMoveTime",
+    "lastActionTime"
+  ],
+  "properties": {
+    "matchID": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "gameType": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "state": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "invitedByUserID": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "xUserID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "oUserID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "currentTurnUserID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "winnerUserID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "yourUserID": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "yourSymbol": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 16
+    },
+    "isYourTurn": {
+      "type": "boolean"
+    },
+    "canMove": {
+      "type": "boolean"
+    },
+    "canAcceptInvite": {
+      "type": "boolean"
+    },
+    "canDeclineInvite": {
+      "type": "boolean"
+    },
+    "canCancelInvite": {
+      "type": "boolean"
+    },
+    "isFinished": {
+      "type": "boolean"
+    },
+    "result": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 64
+    },
+    "opponent": {
+      "type": "object",
+      "required": [
+        "userID",
+        "username",
+        "link",
+        "avatar",
+        "isOnline"
+      ],
+      "properties": {
+        "userID": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "username": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255
+        },
+        "link": {
+          "type": "string",
+          "minLength": 1
+        },
+        "avatar": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isOnline": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "createdTime": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "startedTime": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "finishedTime": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "lastMoveTime": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "lastActionTime": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com https://www.woltlab.com/XSD/6.0/package.xsd" name="com.example.yabfs.games.examplegame">
+    <packageinformation>
+        <packagename><![CDATA[YABFS: Example Game]]></packagename>
+        <packagename language="de"><![CDATA[YABFS: Beispielspiel]]></packagename>
+        <packagename language="cs"><![CDATA[YABFS: Ukazkova hra]]></packagename>
+        <packagename language="da"><![CDATA[YABFS: Eksempelspil]]></packagename>
+        <packagename language="es"><![CDATA[YABFS: Juego de ejemplo]]></packagename>
+        <packagename language="fr"><![CDATA[YABFS: Jeu d'exemple]]></packagename>
+        <packagename language="hu"><![CDATA[YABFS: Peldajatek]]></packagename>
+        <packagename language="it"><![CDATA[YABFS: Gioco di esempio]]></packagename>
+        <packagename language="nl"><![CDATA[YABFS: Voorbeeldspel]]></packagename>
+        <packagename language="no"><![CDATA[YABFS: Eksempelspill]]></packagename>
+        <packagename language="pl"><![CDATA[YABFS: Gra przykladowa]]></packagename>
+        <packagename language="ro"><![CDATA[YABFS: Joc demonstrativ]]></packagename>
+        <packagename language="ru"><![CDATA[YABFS: Пример игры]]></packagename>
+        <packagename language="sv"><![CDATA[YABFS: Exempelspel]]></packagename>
+        <packagename language="tr"><![CDATA[YABFS: Ornek Oyun]]></packagename>
+
+        <packagedescription><![CDATA[Starter package for building custom YABFS game extensions.]]></packagedescription>
+        <packagedescription language="de"><![CDATA[Starterpaket zum Erstellen eigener YABFS-Spielerweiterungen.]]></packagedescription>
+        <packagedescription language="cs"><![CDATA[Startovaci balicek pro tvorbu vlastnich hernich rozsireni YABFS.]]></packagedescription>
+        <packagedescription language="da"><![CDATA[Startpakke til udvikling af egne YABFS-spiludvidelser.]]></packagedescription>
+        <packagedescription language="es"><![CDATA[Paquete inicial para desarrollar extensiones de juegos personalizadas para YABFS.]]></packagedescription>
+        <packagedescription language="fr"><![CDATA[Paquet de depart pour creer des extensions de jeu personnalisees pour YABFS.]]></packagedescription>
+        <packagedescription language="hu"><![CDATA[Kezdo csomag egyedi YABFS-jatek kiegeszitok fejlesztesehez.]]></packagedescription>
+        <packagedescription language="it"><![CDATA[Pacchetto iniziale per creare estensioni di gioco personalizzate per YABFS.]]></packagedescription>
+        <packagedescription language="nl"><![CDATA[Startpakket voor het bouwen van aangepaste YABFS-speluitbreidingen.]]></packagedescription>
+        <packagedescription language="no"><![CDATA[Startpakke for a bygge egne YABFS-spillutvidelser.]]></packagedescription>
+        <packagedescription language="pl"><![CDATA[Pakiet startowy do tworzenia wlasnych rozszerzen gier YABFS.]]></packagedescription>
+        <packagedescription language="ro"><![CDATA[Pachet de pornire pentru dezvoltarea extensiilor de joc personalizate YABFS.]]></packagedescription>
+        <packagedescription language="ru"><![CDATA[Стартовый пакет для разработки пользовательских игровых расширений YABFS.]]></packagedescription>
+        <packagedescription language="sv"><![CDATA[Startpaket for att bygga egna YABFS-spelutokningar.]]></packagedescription>
+        <packagedescription language="tr"><![CDATA[YABFS icin ozel oyun eklentileri gelistirmek icin baslangic paketi.]]></packagedescription>
+
+        <packageurl><![CDATA[https://softcreatr.dev]]></packageurl>
+        <version>1.0.0</version>
+        <date>2026-02-22</date>
+        <license><![CDATA[MIT]]></license>
+    </packageinformation>
+
+    <authorinformation>
+        <author><![CDATA[SoftCreatR.dev]]></author>
+        <authorurl><![CDATA[https://softcreatr.dev]]></authorurl>
+    </authorinformation>
+
+    <requiredpackages>
+        <requiredpackage minversion="6.2.0">com.woltlab.wcf</requiredpackage>
+        <requiredpackage minversion="1.0.0">de.softcreatr.wsc.yabfs.games</requiredpackage>
+    </requiredpackages>
+
+    <excludedpackages>
+        <excludedpackage version="6.3.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+    </excludedpackages>
+
+    <instructions type="install">
+        <instruction type="file"/>
+        <instruction type="template"/>
+        <instruction type="language"/>
+        <instruction type="templateListener"/>
+        <instruction type="objectType"/>
+    </instructions>
+
+    <instructions type="update" fromversion="1.0.*">
+        <instruction type="file"/>
+        <instruction type="template"/>
+        <instruction type="language"/>
+        <instruction type="templateListener"/>
+        <instruction type="objectType"/>
+    </instructions>
+</package>

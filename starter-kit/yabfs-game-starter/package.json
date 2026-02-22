@@ -1,0 +1,29 @@
+{
+  "name": "yabfs-game-starter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "build:min": "esbuild files/js/SoftCreatR/Yabfs/Ui/Page/Games/ExampleGame.js --minify --outfile=files/js/SoftCreatR/Yabfs/Ui/Page/Games/ExampleGame.min.js",
+    "lint": "eslint \"ts/**/*.ts\"",
+    "lint:fix": "eslint --fix \"ts/**/*.ts\"",
+    "format": "prettier --write \"{ts,templates,language}/**/*.{ts,tpl,xml}\"",
+    "format:check": "prettier --check \"{ts,templates,language}/**/*.{ts,tpl,xml}\""
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/js": "^10.0.1",
+    "@softcreatr/yabfs-games-types": "github:SoftCreatRMedia/yabfs-games-types#v0.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.0",
+    "@typescript-eslint/parser": "^8.56.0",
+    "esbuild": "^0.27.3",
+    "eslint": "^10.0.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@woltlab/d.ts": "https://github.com/WoltLab/d.ts.git#b57b0c5e6ea6e0179df0c2fee791863c928b8578"
+  }
+}

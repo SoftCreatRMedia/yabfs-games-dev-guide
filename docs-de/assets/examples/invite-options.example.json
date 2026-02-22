@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "payload": {
+    "boardSize": 4,
+    "allowUndo": false,
+    "timeLimitSeconds": 60,
+    "mode": "ranked"
+  }
+}

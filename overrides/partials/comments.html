@@ -1,0 +1,42 @@
+{% if config.extra.giscus and not config.extra.offline %}
+  <div id="giscus-container"></div>
+  <script>
+    (() => {
+      const consentEnabled = {% if config.extra.consent %}true{% else %}false{% endif %};
+      const consentCookie = "{{ config.extra.giscus.consent_cookie | d("giscus", true) }}";
+
+      if (consentEnabled) {
+        const consent = typeof __md_get === "function" ? __md_get("__consent") : null;
+        if (!consent || !consent[consentCookie]) {
+          return;
+        }
+      }
+
+      if (document.querySelector("script[data-giscus-loader='1']")) {
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = "https://giscus.app/client.js";
+      script.dataset.repo = "{{ config.extra.giscus.repo }}";
+      script.dataset.repoId = "{{ config.extra.giscus.repo_id }}";
+      script.dataset.category = "{{ config.extra.giscus.category }}";
+      script.dataset.categoryId = "{{ config.extra.giscus.category_id }}";
+      script.dataset.mapping = "{{ config.extra.giscus.mapping }}";
+      script.dataset.strict = "{{ config.extra.giscus.strict }}";
+      script.dataset.reactionsEnabled = "{{ config.extra.giscus.reactions_enabled }}";
+      script.dataset.emitMetadata = "{{ config.extra.giscus.emit_metadata }}";
+      script.dataset.inputPosition = "{{ config.extra.giscus.input_position }}";
+      script.dataset.theme = "{{ config.extra.giscus.theme }}";
+      script.dataset.lang = "{{ config.theme.language }}";
+      script.dataset.giscusLoader = "1";
+      script.crossOrigin = "anonymous";
+      script.async = true;
+
+      const container = document.getElementById("giscus-container");
+      if (container) {
+        container.appendChild(script);
+      }
+    })();
+  </script>
+{% endif %}

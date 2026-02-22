@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com https://www.woltlab.com/XSD/6.0/language.xsd" languagename="Nederlands" languagecode="nl" countrycode="nl">
+    <category name="wcf.user.yabfs.games.catalog.exampleGame">
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.title"><![CDATA[Voorbeeldspel]]></item>
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.description"><![CDATA[Minimale startgame voor YABFS-uitbreidingen.]]></item>
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.rules"><![CDATA[Definieer je eigen regels.]]></item>
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.button"><![CDATA[Spelen]]></item>
+    </category>
+    <category name="wcf.user.yabfs.games.board.exampleGame">
+        <item name="wcf.user.yabfs.games.board.exampleGame.play"><![CDATA[Zet doen]]></item>
+    </category>
+</language>

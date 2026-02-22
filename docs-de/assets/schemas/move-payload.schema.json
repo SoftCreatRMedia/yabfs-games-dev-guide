@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://softcreatrmedia.github.io/yabfs-games-dev-guide/assets/schemas/move-payload.schema.json",
+  "title": "YABFS Move Payload (Strict Starter Template)",
+  "description": "Strict template schema for extension-owned move payloads.",
+  "type": "object",
+  "required": [
+    "action",
+    "payload"
+  ],
+  "properties": {
+    "action": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[a-z][a-zA-Z0-9]*$"
+    },
+    "payload": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^[a-z][a-zA-Z0-9]*$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/jsonValue"
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "requestID": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "clientTimestamp": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "requestID",
+        "clientTimestamp"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "jsonValue": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 5000
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/jsonValue"
+          }
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "pattern": "^[a-z][a-zA-Z0-9]*$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/jsonValue"
+          }
+        }
+      ]
+    }
+  }
+}

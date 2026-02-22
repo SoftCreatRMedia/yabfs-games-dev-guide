@@ -1,0 +1,22 @@
+nav:
+  - Introduction:
+      - index.md
+      - architecture.md
+      - minimal-package-tree.md
+      - versioning-compatibility.md
+      - starter-kit-reference.md
+  - Backend Runtime:
+      - runtime-state-machine.md
+      - api-contract.md
+      - payload-schema.md
+      - concurrency-locking.md
+      - security-checklist.md
+  - Frontend:
+      - frontend-ux-guidelines.md
+  - ACP:
+      - acp-settings-example.md
+  - QA:
+      - troubleshooting-playbook.md
+      - testing-matrix.md
+  - Tutorial:
+      - minimal-example.md

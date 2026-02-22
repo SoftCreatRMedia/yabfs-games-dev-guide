@@ -1,0 +1,62 @@
+{#-
+  Consent behavior override:
+  - Accept: enable Giscus consent and persist it
+  - Reject: clear Giscus consent
+  - Footer trigger [data-open-consent] reopens dialog anytime
+-#}
+<script>
+  (() => {
+    const consentKey = "{{ config.extra.giscus.consent_cookie | d("giscus", true) }}";
+    const consent = __md_get("__consent");
+    const form = document.forms.consent;
+
+    if (!form) {
+      return;
+    }
+
+    const openConsentDialog = () => {
+      const component = document.querySelector("[data-md-component=consent]");
+      if (component) {
+        component.hidden = false;
+      }
+    };
+
+    if (!consent && location.protocol !== "file:") {
+      setTimeout(() => {
+        openConsentDialog();
+      }, 250);
+    }
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) {
+        return;
+      }
+
+      const trigger = target.closest("[data-open-consent]");
+      if (!trigger) {
+        return;
+      }
+
+      event.preventDefault();
+      openConsentDialog();
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      __md_set("__consent", { [consentKey]: true });
+
+      location.hash = "";
+      location.reload();
+    });
+
+    form.addEventListener("reset", (event) => {
+      event.preventDefault();
+
+      __md_set("__consent", {});
+      location.hash = "";
+      location.reload();
+    });
+  })();
+</script>

@@ -1,0 +1,37 @@
+{
+  "matchID": 42,
+  "gameType": "exampleGame",
+  "state": 2,
+  "invitedByUserID": 5,
+  "xUserID": 5,
+  "oUserID": 8,
+  "currentTurnUserID": 8,
+  "winnerUserID": null,
+  "yourUserID": 8,
+  "yourSymbol": "O",
+  "isYourTurn": true,
+  "canMove": true,
+  "canAcceptInvite": false,
+  "canDeclineInvite": false,
+  "canCancelInvite": false,
+  "isFinished": false,
+  "result": null,
+  "opponent": {
+    "userID": 5,
+    "username": "Alice",
+    "link": "https://community.example.local/user/5-alice/",
+    "avatar": "https://community.example.local/images/avatar/5.png",
+    "isOnline": true
+  },
+  "createdTime": 1730000000,
+  "startedTime": 1730000020,
+  "finishedTime": null,
+  "lastMoveTime": 1730000030,
+  "lastActionTime": 1730000030,
+  "exampleGameBoard": [
+    "X",
+    null,
+    "O",
+    null
+  ]
+}

@@ -1,0 +1,103 @@
+[project]
+site_name = "YABFS Games Developer Guide"
+site_description = "Technisches Handbuch zur Implementierung von YABFS-Spielerweiterungen"
+site_url = "https://softcreatrmedia.github.io/yabfs-games-dev-guide/de/"
+repo_url = "https://github.com/SoftCreatRMedia/yabfs-games-dev-guide"
+repo_name = "SoftCreatRMedia/yabfs-games-dev-guide"
+docs_dir = "docs-de"
+site_dir = "site/de"
+extra_css = ["assets/stylesheets/extra.css"]
+copyright = """
+<span class="footer-left">Copyright &copy; 2026 SoftCreatR.dev</span><span class="footer-right"><a href="#__consent" data-open-consent>Kommentare-Einwilligung</a> &nbsp;|&nbsp; <a href="https://softcreatr.dev/legal-notice/" target="_blank" rel="noopener">Legal Notice</a> &nbsp;|&nbsp; <a href="https://softcreatr.dev/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
+"""
+
+[project.theme]
+font = false
+favicon = "assets/logo.svg"
+custom_dir = "overrides"
+language = "de"
+logo = "assets/logo.svg"
+features = ["navigation.footer", "toc.integrate", "content.code.annotate", "search.highlight"]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+[project.theme.palette.toggle]
+icon = "lucide/sun-moon"
+name = "Zum hellen Modus wechseln"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "cyan"
+accent = "cyan"
+[project.theme.palette.toggle]
+icon = "lucide/sun"
+name = "Zum dunklen Modus wechseln"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "cyan"
+accent = "cyan"
+[project.theme.palette.toggle]
+icon = "lucide/moon"
+name = "Zum System-Modus wechseln"
+
+[project.markdown_extensions]
+"pymdownx.superfences" = {}
+admonition = {}
+attr_list = {}
+footnotes = {}
+md_in_html = {}
+tables = {}
+toc = { permalink = true }
+
+[project.markdown_extensions."pymdownx.highlight"]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+guess_lang = false
+
+[project.extra]
+homepage = "https://softcreatr.dev"
+scope = "/"
+generator = false
+offline = false
+
+[project.extra.consent]
+title = "Einwilligung für Giscus-Kommentare"
+description = """
+Diese Seite kann Giscus (GitHub Discussions) laden, um Kommentare anzuzeigen
+und zu veröffentlichen. Giscus wird erst nach Ihrer Einwilligung geladen.
+"""
+actions = ["accept", "reject"]
+
+[[project.extra.alternate]]
+name = "English"
+link = "/yabfs-games-dev-guide/en/"
+lang = "en"
+
+[[project.extra.alternate]]
+name = "Deutsch"
+link = "/yabfs-games-dev-guide/de/"
+lang = "de"
+
+[project.extra.giscus]
+repo = "SoftCreatRMedia/yabfs-games-dev-guide"
+repo_id = "R_kgDORWPaJA"
+category = "General"
+category_id = "DIC_kwDORWPaJM4C2_7f"
+mapping = "title"
+strict = "0"
+reactions_enabled = "1"
+emit_metadata = "0"
+input_position = "bottom"
+theme = "preferred_color_scheme"
+consent_cookie = "giscus"
+
+[project.plugins]
+"awesome-nav" = {}
+meta = {}
+
+[project.plugins.offline]
+enabled = true

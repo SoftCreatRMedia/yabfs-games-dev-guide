@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com https://www.woltlab.com/XSD/6.0/language.xsd" languagename="Cestina" languagecode="cs" countrycode="cz">
+    <category name="wcf.user.yabfs.games.catalog.exampleGame">
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.title"><![CDATA[Ukazkova hra]]></item>
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.description"><![CDATA[Minimalni startovni hra pro rozsireni YABFS.]]></item>
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.rules"><![CDATA[Definujte vlastni pravidla.]]></item>
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.button"><![CDATA[Hrat]]></item>
+    </category>
+    <category name="wcf.user.yabfs.games.board.exampleGame">
+        <item name="wcf.user.yabfs.games.board.exampleGame.play"><![CDATA[Tah]]></item>
+    </category>
+</language>

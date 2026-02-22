@@ -1,0 +1,11 @@
+{
+  "action": "playCell",
+  "payload": {
+    "row": 1,
+    "col": 2
+  },
+  "meta": {
+    "requestID": "req-7f2f3a",
+    "clientTimestamp": 1730000041
+  }
+}

@@ -1,0 +1,2 @@
+zensical==0.0.23
+jsonschema==4.26.0

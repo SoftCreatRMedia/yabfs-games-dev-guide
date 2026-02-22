@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com https://www.woltlab.com/XSD/6.0/language.xsd" languagename="Norsk" languagecode="no" countrycode="no">
+    <category name="wcf.user.yabfs.games.catalog.exampleGame">
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.title"><![CDATA[Eksempelspill]]></item>
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.description"><![CDATA[Minimalt startspill for YABFS-utvidelser.]]></item>
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.rules"><![CDATA[Definer dine egne regler.]]></item>
+        <item name="wcf.user.yabfs.games.catalog.exampleGame.button"><![CDATA[Spill]]></item>
+    </category>
+    <category name="wcf.user.yabfs.games.board.exampleGame">
+        <item name="wcf.user.yabfs.games.board.exampleGame.play"><![CDATA[Gjor trekk]]></item>
+    </category>
+</language>

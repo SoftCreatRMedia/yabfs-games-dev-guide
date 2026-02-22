@@ -1,0 +1,24 @@
+{#-
+  Simplified consent dialog for Giscus comments only.
+  No per-service checklist is shown.
+-#}
+{% set actions = config.extra.consent.actions %}
+{% if not actions %}
+  {% set actions = ["accept", "reject"] %}
+{% endif %}
+<h4>{{ config.extra.consent.title }}</h4>
+<p>{{ config.extra.consent.description }}</p>
+<div class="md-consent__controls">
+  {% for action in actions %}
+    {% if action == "accept" %}
+      <button class="md-button md-button--primary">
+        {{- lang.t("consent.accept") -}}
+      </button>
+    {% endif %}
+    {% if action == "reject" %}
+      <button type="reset" class="md-button md-button--primary">
+        {{- lang.t("consent.reject") -}}
+      </button>
+    {% endif %}
+  {% endfor %}
+</div>
